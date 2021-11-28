@@ -20,22 +20,23 @@ namespace sqlTestHw17.FF
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DataBaseWorksAboutDi_database2")]
-    public partial class DataBaseWorksAboutDi_Database2Feature
+    [NUnit.Framework.DescriptionAttribute("ChosePairedIdAndLimit5Rows")]
+    public partial class ChosePairedIdAndLimit5RowsFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "SpecFlowFeature2.feature"
+#line 1 "ChosePairsIdLimit5.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FF", "DataBaseWorksAboutDi_database2", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FF", "ChosePairedIdAndLimit5Rows", "As a user\r\nI want to sort a paired id and limit 5 rows \r\nin order to see a paired" +
+                    " first 5 customers id users", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,15 +75,21 @@ namespace sqlTestHw17.FF
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("It is scenario 2")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void ItIsScenario2()
+        [NUnit.Framework.DescriptionAttribute("LimitRowsAndPairedIdInPersonsTables")]
+        [NUnit.Framework.CategoryAttribute("id")]
+        [NUnit.Framework.CategoryAttribute("tablePersons")]
+        [NUnit.Framework.CategoryAttribute("Limit")]
+        [NUnit.Framework.CategoryAttribute("pairedId")]
+        public virtual void LimitRowsAndPairedIdInPersonsTables()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "id",
+                    "tablePersons",
+                    "Limit",
+                    "pairedId"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is scenario 2", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 4
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("LimitRowsAndPairedIdInPersonsTables", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -102,11 +109,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
- testRunner.When("я выбираю сумму больше 200, сортирую по спаданию айди в таблице \"Orders\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+ testRunner.When("I chose paired id, limit output 5 rows in table \"Persons\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 6
- testRunner.Then("я вижу первый ади больше последнего и сумма больше 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 9
+ testRunner.Then("I see paired Id and Limit 5 rows", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

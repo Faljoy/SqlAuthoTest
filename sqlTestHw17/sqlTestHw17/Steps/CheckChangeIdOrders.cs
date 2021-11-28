@@ -6,7 +6,7 @@ using TechTalk.SpecFlow;
 namespace sqlTestHw17
 {
     [Binding]
-    public class DataBaseWorkStepsScenario3
+    public class CheckChangeIdOrders
     {
         private SQLConnecterHelper _sqlHelper = (SQLConnecterHelper)ScenarioContext.Current["SqlHelper"];
 
@@ -18,8 +18,8 @@ namespace sqlTestHw17
         }
         public static int idOrders = ValueId();
 
-        [When(@"я меняю idOrders в таблице ""(.*)"" на рандомное значение, там где id (.*) а сумма (.*)")]
-        public void WhenЯМеняюIdOrdersВТаблицеНаРандомноеЗначениеТамГдеIdАСумма(string tableName, int Id, Decimal sumChose)
+        [When(@"I change idOrders in table ""(.*)"" on random amount where id (.*) and sum (.*)")]
+        public void WhenIChangeIdOrdersInTableOnRandomAmountWhereIdAndSum(string tableName, int Id, Decimal sumChose)
         {
             Random rnd = new Random();
             string query = $"UPDATE Orders " +
@@ -31,8 +31,8 @@ namespace sqlTestHw17
             _sqlHelper.MakeQuery(query);
         }
 
-        [Then(@"я вижу idOrders c новым значением, там где id (.*) а сумма (.*)")]
-        public void ThenЯВижуIdOrdersCНовымЗначениемТамГдеIdАСумма(int Id, Decimal sumChose)
+        [Then(@"I see idOrders with new value, where id (.*) and sum (.*)")]
+        public void ThenISeeIdOrdersWithNewValueWhereIdAndSum(int Id, Decimal sumChose)
         {
             DataTable responseTable = (DataTable)ScenarioContext.Current["OrdersTable"];
             //int numOfRows = responseTable.Rows.Count;

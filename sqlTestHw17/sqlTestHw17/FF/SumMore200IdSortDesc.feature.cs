@@ -20,22 +20,23 @@ namespace sqlTestHw17.FF
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DataBaseWorksAboutDi_database3")]
-    public partial class DataBaseWorksAboutDi_Database3Feature
+    [NUnit.Framework.DescriptionAttribute("ShowOrdersWhereSumMoreThan200SortedByDESC")]
+    public partial class ShowOrdersWhereSumMoreThan200SortedByDESCFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "SpecFlowFeature3.feature"
+#line 1 "SumMore200IdSortDesc.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FF", "DataBaseWorksAboutDi_database3", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FF", "ShowOrdersWhereSumMoreThan200SortedByDESC", "As a employee \r\ni want to see order where summ more than 200\r\nin order to send or" +
+                    "der first priority", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,15 +75,19 @@ namespace sqlTestHw17.FF
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("It is scenario 3")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void ItIsScenario3()
+        [NUnit.Framework.DescriptionAttribute("ChoseSummMoreThan200SortDesc")]
+        [NUnit.Framework.CategoryAttribute("sumOrders")]
+        [NUnit.Framework.CategoryAttribute("tableOrders")]
+        [NUnit.Framework.CategoryAttribute("id")]
+        public virtual void ChoseSummMoreThan200SortDesc()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "sumOrders",
+                    "tableOrders",
+                    "id"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is scenario 3", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 4
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ChoseSummMoreThan200SortDesc", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -102,12 +107,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
- testRunner.When("я меняю idOrders в таблице \"Orders\" на рандомное значение, там где id 13 а сумма " +
-                        "523.10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+ testRunner.When("I chose summ more than 200 sort by DESC id in tables \"Orders\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 6
- testRunner.Then("я вижу idOrders c новым значением, там где id 13 а сумма 523.10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 9
+ testRunner.Then("I see first Id more than last and sum more than 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

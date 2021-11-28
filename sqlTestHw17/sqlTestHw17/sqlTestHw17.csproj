@@ -25,25 +25,25 @@
     <Compile Update="FF\CityStartNameAboutSan.feature.cs">
       <DependentUpon>CityStartNameAboutSan.feature</DependentUpon>
     </Compile>
-    <Compile Update="FF\SpecFlowFeature4.feature.cs">
-      <DependentUpon>SpecFlowFeature4.feature</DependentUpon>
+    <Compile Update="FF\AgeCustomerMoreThan30AndLessThan50.feature.cs">
+      <DependentUpon>AgeCustomerMoreThan30AndLessThan50.feature</DependentUpon>
     </Compile>
-    <Compile Update="FF\SpecFlowFeature3.feature.cs">
-      <DependentUpon>SpecFlowFeature3.feature</DependentUpon>
+    <Compile Update="FF\ChangeIdOrders.feature.cs">
+      <DependentUpon>ChangeIdOrders.feature</DependentUpon>
     </Compile>
-    <Compile Update="FF\SpecFlowFeature2.feature.cs">
-      <DependentUpon>SpecFlowFeature2.feature</DependentUpon>
+    <Compile Update="FF\SumMore200IdSortDesc.feature.cs">
+      <DependentUpon>SumMore200IdSortDesc.feature</DependentUpon>
     </Compile>
     <Compile Update="Steps\CheckCityWhereNameCityStartSan.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Steps\DataBaseWorkStepsScenario4.cs">
+    <Compile Update="Steps\CheckAgeMoreThan30AndLessThan50.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Steps\DataBaseWorkStepsScenario3.cs">
+    <Compile Update="Steps\CheckChangeIdOrders.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Steps\DataBaseWorkStepsScenario2.cs">
+    <Compile Update="Steps\CheckChoseOrdersWhereSumMore200SortDescId.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -53,15 +53,15 @@
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="FF\SpecFlowFeature4.feature">
+    <SpecFlowFeatureFiles Update="FF\AgeCustomerMoreThan30AndLessThan50.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="FF\SpecFlowFeature3.feature">
+    <SpecFlowFeatureFiles Update="FF\ChangeIdOrders.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="FF\SpecFlowFeature2.feature">
+    <SpecFlowFeatureFiles Update="FF\SumMore200IdSortDesc.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>

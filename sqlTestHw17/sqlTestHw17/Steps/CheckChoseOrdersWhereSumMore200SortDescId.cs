@@ -6,23 +6,23 @@ using TechTalk.SpecFlow;
 namespace sqlTestHw17
 {
     [Binding]
-    public class DataBaseWorkStepsScenario2
+    public class CheckChoseOrdersWhereSumMore200SortDescId
     {
         private SQLConnecterHelper _sqlHelper = (SQLConnecterHelper)ScenarioContext.Current["SqlHelper"];
 
-        [When(@"я выбираю сумму больше (.*), сортирую по спаданию айди в таблице ""(.*)""")]
-        public void WhenЯВыбираюСуммуБольшеСортируюПоСпаданиюАйдиВТаблице(int sumChose, string tableName)
+        [When(@"I chose summ more than (.*) sort by DESC id in tables ""(.*)""")]
+        public void WhenIChoseSummMoreThanSortByDESCIdInTables(int sumChose, string tableName)
         {
             string query = $"SELECT * FROM {tableName} " +
-                $"WHERE sumOrders> {sumChose} " +
-                $"Order by id DESC";
+                           $"WHERE sumOrders> {sumChose} " +
+                           $"Order by id DESC";
             DataTable responseTable = _sqlHelper.MakeQuery(query);
             ScenarioContext.Current["PersonsTable"] = responseTable;
             _sqlHelper.MakeQuery(query);
         }
 
-        [Then(@"я вижу первый ади больше последнего и сумма больше (.*)")]
-        public void ThenЯВижуПервыйАдиБольшеПоследнегоИСуммаБольше(int sumChose)
+        [Then(@"I see first Id more than last and sum more than (.*)")]
+        public void ThenISeeFirstIdMoreThanLastAndSumMoreThan(int sumChose)
         {
             DataTable responseTable = (DataTable)ScenarioContext.Current["PersonsTable"];
             int numOfRows = responseTable.Rows.Count;

@@ -35,8 +35,8 @@ namespace sqlTestHw17.FF
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FF", "CheckCityWhereNameLikeSan...", "As a customer\r\ni want to see users who live in San..\r\nin order to i can send them" +
-                    " their order", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FF", "CheckCityWhereNameLikeSan...", "As a customer\r\ni want to see customer who live in San..\r\nin order to i can send t" +
+                    "hem their order", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,7 +75,7 @@ namespace sqlTestHw17.FF
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("scenario about search City where name like San")]
+        [NUnit.Framework.DescriptionAttribute("ScenarioAboutSearchCityWhereNameLikeSan")]
         [NUnit.Framework.CategoryAttribute("city")]
         [NUnit.Framework.CategoryAttribute("tablePersons")]
         [NUnit.Framework.CategoryAttribute("cityLikeSan")]
@@ -86,7 +86,7 @@ namespace sqlTestHw17.FF
                     "tablePersons",
                     "cityLikeSan"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("scenario about search City where name like San", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ScenarioAboutSearchCityWhereNameLikeSan", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden

@@ -20,22 +20,23 @@ namespace sqlTestHw17.FF
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DataBaseWorksAboutDi_database4")]
-    public partial class DataBaseWorksAboutDi_Database4Feature
+    [NUnit.Framework.DescriptionAttribute("ChosePersonsAgeMoreThan30LessThan50")]
+    public partial class ChosePersonsAgeMoreThan30LessThan50Feature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "SpecFlowFeature4.feature"
+#line 1 "AgeCustomerMoreThan30AndLessThan50.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FF", "DataBaseWorksAboutDi_database4", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FF", "ChosePersonsAgeMoreThan30LessThan50", "As a employee\r\ni want to sort Customer age more than 30 and less than 50\r\nin orde" +
+                    "r to see a age statistics", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,15 +75,17 @@ namespace sqlTestHw17.FF
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("It is scenario 4")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void ItIsScenario4()
+        [NUnit.Framework.DescriptionAttribute("SortAgeMoreThan30AndLessThan50")]
+        [NUnit.Framework.CategoryAttribute("Age")]
+        [NUnit.Framework.CategoryAttribute("tablePersons")]
+        public virtual void SortAgeMoreThan30AndLessThan50()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "Age",
+                    "tablePersons"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is scenario 4", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 4
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SortAgeMoreThan30AndLessThan50", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -102,12 +105,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
- testRunner.When("я выбираю в таблице \"Persons\" все результаты, где возраст покупателей меньше 50 и" +
-                        " больше 30", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+ testRunner.When("I chose in table \"Persons\" all resultat, where age less than 50 and more than 30", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 6
- testRunner.Then("я вижу покупателей с возрастом больше 30", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 9
+ testRunner.Then("I see customers whose age more than 30 and less than 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
